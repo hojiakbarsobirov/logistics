@@ -28,7 +28,7 @@ const NavbarPage = () => {
                 </div>
             </section>
 
-            <nav className='w-full py-3 px-4 xl:px-0 flex justify-around items-center shadow-md border bg-white '>
+            <nav className='w-full py-3 px-4 xl:px-0 flex justify-around xl:sticky top-0 items-center shadow-md border bg-white '>
 
                 <ul className='hidden xl:flex font-medium items-center gap-6'>
                     <li className="hover:text-red-600 cursor-pointer"><Link to={'/'}>Home</Link></li>
