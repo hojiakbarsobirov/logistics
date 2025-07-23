@@ -3,7 +3,7 @@ import React from 'react'
 const BannerPage = () => {
     return (
         <>
-            <section className='bg-[url("banner-img.avif")] w-full h-[70vh] bg-center bg-cover'>
+            <section className='bg-[url("/banner-img.avif")] w-full h-[70vh] bg-center bg-cover'>
                 <header className='bg-black w-full h-full bg-opacity-45 flex justify-center items-center'>
                     <div className='w-[95%] xl:w-[62%] h-full flex flex-col justify-center gap-8 xl:gap-14 items-start'>
                         <h4 className='text-white font-medium text-xl'>Since 1998</h4>
