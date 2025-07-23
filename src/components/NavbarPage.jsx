@@ -6,6 +6,7 @@ const NavbarPage = () => {
 
     return (
         <>
+            {/* Top Header */}
             <section className='shadow-md w-full h-auto py-2 px-4 xl:px-0 flex flex-col-reverse xl:flex-row justify-evenly items-start xl:items-center bg-white'>
                 <img className='w-36' src="/navbar-logo.png" alt="Logo" />
 
@@ -28,8 +29,10 @@ const NavbarPage = () => {
                 </div>
             </section>
 
-            <nav className='w-full py-3 px-4 xl:px-0 flex justify-around xl:sticky top-0 items-center shadow-md border bg-white '>
+            {/* Main Navbar */}
+            <nav className='relative w-full py-3 px-4 xl:px-0 flex justify-around items-center shadow-md border bg-white'>
 
+                {/* Desktop Menu */}
                 <ul className='hidden xl:flex font-medium items-center gap-6'>
                     <li className="hover:text-red-600 cursor-pointer"><Link to={'/'}>Home</Link></li>
                     <li className="hover:text-red-600 cursor-pointer"><Link to={'/about-page'}>About us</Link></li>
@@ -37,12 +40,14 @@ const NavbarPage = () => {
                     <li className="hover:text-red-600 cursor-pointer">Privacy Policy</li>
                 </ul>
 
+                {/* Desktop Socials */}
                 <div className='hidden xl:flex items-center gap-4'>
                     <img className='w-5 cursor-pointer hover:opacity-80' src="/facebook-icons.png" alt="facebook" />
                     <img className='w-5 cursor-pointer hover:opacity-80' src="/twitter.png" alt="twitter" />
                     <img className='w-5 cursor-pointer hover:opacity-80' src="/linkedin.png" alt="linkedin" />
                 </div>
 
+                {/* Mobile Burger Menu */}
                 <div
                     className='xl:hidden flex flex-col gap-1 cursor-pointer z-50'
                     onClick={() => setMenuOpen(!menuOpen)}
@@ -52,11 +57,13 @@ const NavbarPage = () => {
                     <span className={`block w-6 h-[2px] bg-black transition-transform duration-300 ${menuOpen ? '-rotate-45 -translate-y-1' : ''}`} />
                 </div>
 
-                <div className={`absolute top-full left-0 w-full bg-white flex flex-col gap-4 p-6 font-medium shadow-md transition-all duration-500 z-40 ${menuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
-                    <a className="hover:text-red-600" href="#"><Link to={'/'}>Home</Link></a>
-                    <a className="hover:text-red-600" href="#"><Link to={'/about-page'}>About us</Link></a>
+                {/* Mobile Menu */}
+                <div className={`absolute top-full left-0 w-full bg-white flex flex-col gap-4 p-6 font-medium shadow-md transition-all ease-in-out duration-500 z-40 ${menuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+                    <Link className="hover:text-red-600" to={'/'}>Home</Link>
+                    <Link className="hover:text-red-600" to={'/about-page'}>About us</Link>
                     <a className="hover:text-red-600" href="#">Contact</a>
                     <a className="hover:text-red-600" href="#">Privacy Policy</a>
+
                     <div className='flex gap-4 mt-4'>
                         <img className='w-5' src="/facebook-icons.png" alt="facebook" />
                         <img className='w-5' src="/twitter.png" alt="twitter" />
