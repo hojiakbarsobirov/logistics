@@ -22,7 +22,7 @@ const HomePage = () => {
             </section>
             <LogisticsSolutions />
             <section className=' w-full h-auto flex justify-center'>
-                <header className='shadow-md w-[95%] xl:w-[62%] h-auto py-5 px-2 xl:px-0'>
+                <header className=' w-[95%] xl:w-[62%] h-auto py-5 px-2 xl:px-0'>
                     <OurService/>
                     <ExpressAbout/>
                     <LogisticNews/>

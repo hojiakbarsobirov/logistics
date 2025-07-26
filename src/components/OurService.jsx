@@ -19,7 +19,7 @@ const OurService = () => {
                             <h3 className='font-medium text-xl md:text-2xl'>Land Transport</h3>
                         </div>
                         <p className='text-gray-500 mt-3 text-sm md:text-base'>
-                            Efficient and reliable land transport solutions for your goods. From small packages to large shipments, we ensure timely deliveries with utmost care and precision across any distance.
+                            Seamless ground transportation tailored to your cargo needs. Whether it’s local distribution or cross-border haulage, our land logistics services guarantee safe, on-schedule delivery with full visibility and operational excellence.
                         </p>
                     </div>
 
@@ -31,7 +31,7 @@ const OurService = () => {
                             <h3 className='font-medium text-xl md:text-2xl'>Cargo Storage</h3>
                         </div>
                         <p className='text-gray-500 mt-3 text-sm md:text-base'>
-                            Secure and spacious cargo storage facilities designed to keep your goods safe. With advanced monitoring systems and flexible options, your inventory is always in trusted hands.
+                            State-of-the-art storage solutions built for safety, scalability, and efficiency. Our facilities offer controlled environments, real-time inventory tracking, and adaptable space to meet the demands of your supply chain.
                         </p>
                     </div>
 

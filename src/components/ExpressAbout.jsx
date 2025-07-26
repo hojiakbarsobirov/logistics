@@ -6,7 +6,7 @@ const ExpressAbout = () => {
             <section className=' w-full h-auto py-5 flex flex-col xl:flex-row justify-between items-start'>
 
                 <div className='w-full xl:w-[580px] h-auto py-4 flex flex-col justify-center xl:justify-start items-start p-0 xl:p-5'>
-                    <h4 className='text-red-600 font-medium text-xl mb-5'>Numbers Speak For Themselves</h4>
+                    <h4 className='text-red-600 font-medium text-xl mb-5'>Behind every number there is a succesfull delivery</h4>
                     <h2 className='font-medium text-4xl xl:text-6xl'>Take Your Goods Anywhere Safely</h2>
                 </div>
 

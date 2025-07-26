@@ -16,7 +16,7 @@ const AboutSection = () => {
                         <div className='flex items-center gap-2 xl:gap-4'>
                             <img className='w-8 xl:w-10' src="/experience-icons.png" alt="" />
                             <div className='flex flex-col items-center gap-2'>
-                                <h2 className='text-red-500 font-bold text-3xl xl:text-4xl'>4+</h2>
+                                <h2 className='text-red-500 font-bold text-3xl xl:text-4xl'>17+</h2>
                                 <p className='font-medium'>Years Experience</p>
                             </div>
                         </div>
@@ -24,7 +24,7 @@ const AboutSection = () => {
                         <div className='flex items-center gap-4'>
                             <img className='w-8 xl:w-10' src="/done-icons.png" alt="" />
                             <div className='flex flex-col items-center gap-2'>
-                                <h2 className='text-red-500 font-bold text-3xl xl:text-4xl'>99+</h2>
+                                <h2 className='text-red-500 font-bold text-3xl xl:text-4xl'>100+</h2>
                                 <p className='font-medium'>Project Done</p>
                             </div>
                         </div>

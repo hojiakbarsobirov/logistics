@@ -43,7 +43,7 @@ const NavbarPage = () => {
                 {/* Desktop Socials */}
                 <div className='hidden xl:flex items-center gap-4'>
                     <img className='w-5 cursor-pointer hover:opacity-80' src="/facebook-icons.png" alt="facebook" />
-                    <img className='w-5 cursor-pointer hover:opacity-80' src="/twitter.png" alt="twitter" />
+                    <img className='w-5 cursor-pointer hover:opacity-80' src="/instagram.png" alt="instagram" />
                     <img className='w-5 cursor-pointer hover:opacity-80' src="/linkedin.png" alt="linkedin" />
                 </div>
 
@@ -66,7 +66,7 @@ const NavbarPage = () => {
 
                     <div className='flex gap-4 mt-4'>
                         <img className='w-5' src="/facebook-icons.png" alt="facebook" />
-                        <img className='w-5' src="/twitter.png" alt="twitter" />
+                        <img className='w-5' src="/instagram.png" alt="instagram" />
                         <img className='w-5' src="/linkedin.png" alt="linkedin" />
                     </div>
                 </div>
