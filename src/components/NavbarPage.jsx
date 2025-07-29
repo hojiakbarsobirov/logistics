@@ -14,12 +14,12 @@ const NavbarPage = () => {
                     <div className='flex items-center gap-4 xl:gap-6'>
                         <div className='flex items-center gap-2'>
                             <img className='w-4 xl:w-5' src="/call.png" alt="call" />
-                            <p className='text-gray-500 text-sm xl:text-lg'>+998 (98) 999-99-99</p>
+                            <p className='text-gray-500 text-[13px] xl:text-lg'>+998 (97) 776-44-44</p>
                         </div>
 
                         <div className='flex items-center gap-2'>
                             <img className='w-4 xl:w-5' src="/email.png" alt="email" />
-                            <p className='text-gray-500 text-sm xl:text-lg'>goldenbellexpress@gmail.com</p>
+                            <p className='text-gray-500 text-[13px] xl:text-lg'>goldenbellexpress@gmail.com</p>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@ const NavbarPage = () => {
                 <ul className='hidden xl:flex font-medium items-center gap-6'>
                     <li className="hover:text-red-600 cursor-pointer"><Link to={'/'}>Home</Link></li>
                     <li className="hover:text-red-600 cursor-pointer"><Link to={'/about-page'}>About us</Link></li>
-                    <li className="hover:text-red-600 cursor-pointer">Contact</li>
+                    <li className="hover:text-red-600 cursor-pointer"><Link to={'/contact-page'}>Contact</Link></li>
                     <li className="hover:text-red-600 cursor-pointer">Privacy Policy</li>
                 </ul>
 
