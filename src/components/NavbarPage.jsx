@@ -61,7 +61,7 @@ const NavbarPage = () => {
                 <div className={`absolute top-full left-0 w-full bg-white flex flex-col gap-4 p-6 font-medium shadow-md transition-all ease-in-out duration-500 z-40 ${menuOpen ? 'opacity-100 max-h-[500px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
                     <Link className="hover:text-red-600" to={'/'}>Home</Link>
                     <Link className="hover:text-red-600" to={'/about-page'}>About us</Link>
-                    <a className="hover:text-red-600" href="#">Contact</a>
+                    <a className="hover:text-red-600" href="#"><Link to={'/contact-page'}>Contact</Link></a>
                     <a className="hover:text-red-600" href="#">Privacy Policy</a>
 
                     <div className='flex gap-4 mt-4'>
