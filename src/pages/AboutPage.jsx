@@ -7,17 +7,29 @@ import FooterPage from '../components/FooterPage'
 
 const AboutPage = () => {
     return (
-        <>
+        <main className="w-full bg-white selection:bg-red-500 selection:text-white">
+            {/* Navigatsiya */}
             <NavbarPage />
+
+            {/* About Sahifasi uchun Banner (Sarlavha qismi) */}
             <AboutBanner />
-            <section className=' w-full h-auto flex justify-center'>
-                <header className='w-[95%] xl:w-[62%] h-auto py-10'>
-                    <AboutComponents />
-                </header>
+
+            {/* Asosiy Ma'lumotlar Qismi */}
+            <section className="w-full py-16 md:py-24">
+                <div className="container mx-auto px-4 lg:px-0">
+                    {/* Markazlashtirilgan konteyner (Sizning xl:w-[62%] uslubingizda) */}
+                    <div className="max-w-[1200px] mx-auto">
+                        <AboutComponents />
+                    </div>
+                </div>
             </section>
-            <AboutExport/>
-            <FooterPage/>
-        </>
+
+            {/* Eksport yoki Maxsus Xizmatlar bloki (Full width rasm bo'lishi mumkin) */}
+            <AboutExport />
+
+            {/* Pastki qism */}
+            <FooterPage />
+        </main>
     )
 }
 

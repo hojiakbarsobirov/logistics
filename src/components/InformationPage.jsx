@@ -2,26 +2,47 @@ import React from 'react'
 
 const InformationPage = () => {
     return (
-        <>
-            <section className="shadow-md p-0 xl:p-2 w-full rounded-md flex flex-col xl:flex-row overflow-hidden">
-                <div className="bg-blue-800 border-b rounded-none xl:rounded-md w-full border-r-[1px] xl:border-b-[1px] border-gray-400 xl:w-[295px] h-[300px] px-4 xl:h-[300px] flex flex-col justify-center gap-5 items-center">
-                    <img className='w-14' src="/pin.png" alt="" />
-                    <h2 className='font-medium text-xl text-white'>Location</h2>
-                    <p className='text-center text-gray-300'>1800 W Hawthorne Ln, West Chicago, Illinois 60185</p>
+        <section className="container mx-auto px-4 -mt-12 relative z-10">
+            <div className="bg-white shadow-2xl rounded-2xl flex flex-col xl:flex-row overflow-hidden border border-gray-100">
+                
+                {/* Location Card */}
+                <div className="bg-blue-900 group w-full xl:w-[320px] p-10 flex flex-col justify-center items-center gap-4 transition-all duration-300 hover:bg-blue-950 border-b xl:border-b-0 xl:border-r border-blue-800">
+                    <div className="bg-white/10 p-4 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <img className='w-10 h-10 object-contain' src="/pin.png" alt="Location" />
+                    </div>
+                    <h2 className='font-bold text-2xl text-white mt-2'>Location</h2>
+                    <p className='text-center text-blue-100/80 leading-relaxed'>
+                        1800 W Hawthorne Ln, <br /> 
+                        West Chicago, Illinois 60185
+                    </p>
                 </div>
 
-                <div className="bg-blue-800 rounded-none xl:rounded-md w-full xl:w-[295px] h-[300px] xl:h-[300px] flex flex-col justify-center gap-5 items-center px-4">
-                    <img className='w-14' src="/wall-clock.png" alt="" />
-                    <h2 className='font-medium text-xl text-white'>Opening Hours</h2>
-                    <p className='text-center text-gray-300'>12:00 AM - 12:00 PM Monday - Saturday</p>
+                {/* Opening Hours Card */}
+                <div className="bg-blue-900 group w-full xl:w-[320px] p-10 flex flex-col justify-center items-center gap-4 transition-all duration-300 hover:bg-blue-950">
+                    <div className="bg-white/10 p-4 rounded-full group-hover:scale-110 transition-transform duration-300">
+                        <img className='w-10 h-10 object-contain' src="/wall-clock.png" alt="Hours" />
+                    </div>
+                    <h2 className='font-bold text-2xl text-white mt-2'>Opening Hours</h2>
+                    <p className='text-center text-blue-100/80 leading-relaxed'>
+                        12:00 AM - 12:00 PM <br />
+                        <span className="font-semibold text-red-400">Monday - Saturday</span>
+                    </p>
                 </div>
 
-                <div className="w-full xl:flex-1 h-[150px] xl:h-[300px] px-8 xl:px-14 flex justify-start items-center">
-                    <span className='font-medium text-xl'>For More Information</span>
+                {/* Call to Action Section */}
+                <div className="flex-1 bg-white p-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div className="space-y-2 text-center md:text-left">
+                        <h3 className='font-bold text-2xl text-gray-800'>For More Information</h3>
+                        <p className='text-gray-500'>Do you have any questions? We are here to help you.</p>
+                    </div>
+                    
+                    <button className="px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/30 transition-all active:scale-95 whitespace-nowrap">
+                        Contact Us Now
+                    </button>
                 </div>
-            </section>
 
-        </>
+            </div>
+        </section>
     )
 }
 

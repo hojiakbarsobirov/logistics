@@ -2,60 +2,88 @@ import React from 'react'
 
 const FooterPage = () => {
     return (
-        <>
-            <section className='bg-blue-950 w-full h-auto py-5 flex flex-col justify-center items-center'>
-
-                <header className=' w-[95%] xl:w-[62%] h-[85%] py-5 px-2 xl:px-0'>
-                    <div className='w-full flex flex-col justify-center items-start xl:items-center'>
-                        <img className='w-36' src="/navbar-logo.png" alt="" />
-                        <p className='text-gray-400 w-full xl:w-[50%]'>Golden Bell Express is a representative logistics operator providing full range of service in the sphere of customs cargo and transportation worldwide.</p>
+        <footer className='bg-[#050b1a] w-full pt-16 pb-8'>
+            <div className='container mx-auto px-6'>
+                
+                {/* Main Footer Content */}
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-12 border-b border-gray-800'>
+                    
+                    {/* Brand Section */}
+                    <div className='space-y-6'>
+                        <img className='w-44 mb-6' src="/navbar-logo.png" alt="Golden Bell Logo" />
+                        <p className='text-gray-400 leading-relaxed text-sm md:text-base'>
+                            Golden Bell Express is a leading logistics operator providing a full range of services 
+                            in the sphere of customs cargo and global transportation worldwide.
+                        </p>
+                        {/* Social Media Placeholder (optional but recommended) */}
+                        <div className='flex gap-4 pt-2'>
+                            {[1, 2, 3].map((i) => (
+                                <div key={i} className='w-8 h-8 rounded-full bg-gray-800 hover:bg-red-600 transition-colors cursor-pointer'></div>
+                            ))}
+                        </div>
                     </div>
 
-                        <div className='w-full flex flex-col py-5 xl:flex-row justify-between items-start xl:items-center gap-5'>
-                            <div>
-                                <h4 className='font-medium text-white text-xl mb-4'>Company</h4>
-                                <h4 className='flex items-center text-gray-400 gap-2'>
-                                    <img className='w-5' src="/right.png" alt="" />
-                                    Home
-                                </h4>
-                                <h4 className='flex items-center text-gray-400 gap-2'>
-                                    <img className='w-5' src="/right.png" alt="" />
-                                    About Us
-                                </h4>
-                                <h4 className='flex items-center text-gray-400 gap-2'>
-                                    <img className='w-5' src="/right.png" alt="" />
-                                    Contact
-                                </h4>
-                                <h4 className='flex items-center text-gray-400 gap-2'>
-                                    <img className='w-5' src="/right.png" alt="" />
-                                    Privacy Policy
-                                </h4>
+                    {/* Links Section */}
+                    <div className='lg:pl-12'>
+                        <h4 className='font-bold text-white text-xl mb-8 relative inline-block'>
+                            Company
+                            <span className='absolute -bottom-2 left-0 w-8 h-1 bg-red-600'></span>
+                        </h4>
+                        <ul className='space-y-4'>
+                            {['Home', 'About Us', 'Contact', 'Privacy Policy'].map((item) => (
+                                <li key={item} className='group flex items-center text-gray-400 hover:text-white transition-colors cursor-pointer'>
+                                    <span className='text-red-600 mr-2 group-hover:translate-x-1 transition-transform'>→</span>
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Section */}
+                    <div>
+                        <h4 className='font-bold text-white text-xl mb-8 relative inline-block'>
+                            Quick Contact
+                            <span className='absolute -bottom-2 left-0 w-8 h-1 bg-red-600'></span>
+                        </h4>
+                        <div className='space-y-5'>
+                            <div className='flex items-start gap-4 group'>
+                                <div className='bg-gray-800 p-2 rounded group-hover:bg-red-600 transition-colors'>
+                                    <img className='w-4 h-4 invert' src="/location-icons.png" alt="" />
+                                </div>
+                                <span className='text-gray-400 text-sm'>1800 W Hawthorne Ln, West Chicago, Illinois 60185</span>
+                            </div>
+                            
+                            <div className='flex items-center gap-4 group'>
+                                <div className='bg-gray-800 p-2 rounded group-hover:bg-red-600 transition-colors'>
+                                    <img className='w-4 h-4 invert' src="/phone-icons.png" alt="" />
+                                </div>
+                                <span className='text-gray-400 text-sm'>(630) 300-0338</span>
                             </div>
 
-                            <div>
-                                <h4 className='font-medium text-xl text-white mb-5'>Quick Contact</h4>
-                                <h4 className='text-gray-400 flex items-center gap-2 '>
-                                    <img src="/location-icons.png" alt="" />
-                                    1800 W Hawthorne Ln, Wesst Chicago, Illinois 60185
-                                </h4>
-                                <h4 className='text-gray-400 flex items-center gap-2'>
-                                    <img className='w-4' src="/phone-icons.png" alt="" />
-                                    (630) 300-0338
-                                </h4>
-                                <h4 className='text-gray-400 flex items-center gap-2'>
-                                    <img className='w-4' src="/email-icons.png" alt="" />
-                                    team@vamarinc.com
-                                </h4>
+                            <div className='flex items-center gap-4 group'>
+                                <div className='bg-gray-800 p-2 rounded group-hover:bg-red-600 transition-colors'>
+                                    <img className='w-4 h-4 invert' src="/email-icons.png" alt="" />
+                                </div>
+                                <span className='text-gray-400 text-sm'>team@vamarinc.com</span>
                             </div>
                         </div>
-                </header>
+                    </div>
 
-                <header className='border-t border-gray-700 w-[95%] xl:w-[62%] h-[15%] py-5 px-2 xl:px-0 flex justify-center items-center'>
-                    <p className='text-gray-400 font-medium text-sm'>© 2020 GOLDEN BELL EXPRESS</p>
-                </header>
+                </div>
 
-            </section>
-        </>
+                {/* Bottom Bar */}
+                <div className='pt-8 flex flex-col md:flex-row justify-between items-center gap-4'>
+                    <p className='text-gray-500 text-sm'>
+                        © {new Date().getFullYear()} <span className='text-white font-semibold'>GOLDEN BELL EXPRESS</span>. All Rights Reserved.
+                    </p>
+                    <div className='flex gap-6 text-xs text-gray-500 uppercase tracking-widest'>
+                        <span className='hover:text-red-500 cursor-pointer'>Terms</span>
+                        <span className='hover:text-red-500 cursor-pointer'>Sitemap</span>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
     )
 }
 

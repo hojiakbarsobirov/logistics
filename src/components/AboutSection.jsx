@@ -1,56 +1,93 @@
-// src/components/AboutSection.jsx
 import React from 'react'
 import Counter from './Counter';
 
 const AboutSection = () => {
     return (
-        <>
-            <section className='w-full h-auto flex flex-col xl:flex-row justify-between items-center py-5'>
-                <div className='w-full xl:w-[580px] h-auto py-5 space-y-6 flex flex-col justify-around items-start px-2'>
-                    <h4 className='font-medium text-red-500 text-md xl:text-xl'>About Us</h4>
+        <section className='container mx-auto w-full py-16 px-4 lg:py-24'>
+            <div className='flex flex-col xl:flex-row gap-16 items-center'>
+                
+                {/* Left Side: Content */}
+                <div className='w-full xl:w-1/2 space-y-8'>
+                    <div className='space-y-4'>
+                        <div className='flex items-center gap-2'>
+                            <span className='w-12 h-[2px] bg-red-500'></span>
+                            <h4 className='font-bold text-red-500 uppercase tracking-widest text-sm'>
+                                About Our Company
+                            </h4>
+                        </div>
+                        
+                        <h2 className='text-4xl xl:text-6xl font-extrabold text-slate-900 leading-[1.1]'>
+                            Safe and <span className='text-red-600'>Faster</span> Logistic Service Near You
+                        </h2>
+                    </div>
 
-                    <h2 className='font-medium text-3xl xl:text-7xl'>Safe and Faster Logistic Service Neer You</h2>
-
-                    <p className='text-gray-400 text-md xl:text-lg'>
-                        Our logistics services are designed to prioritize your needs, offering unparalleled safety and speed for all your shipments. Whether it’s local deliveries or international cargo, we ensure your goods reach their destination securely and on time. With advanced tracking systems and a dedicated team, we bring reliability and convenience right to your doorstep. Trust us for a seamless logistics experience, wherever you are!
+                    <p className='text-gray-500 text-lg leading-relaxed border-l-4 border-red-500 pl-6 italic'>
+                        "Our logistics services are designed to prioritize your needs, offering unparalleled safety and speed for all your shipments."
                     </p>
 
-                    <div className='w-full h-36 flex justify-between items-center'>
-                        <div className='flex items-center gap-2 xl:gap-4'>
-                            <img className='w-8 xl:w-10' src="/experience-icons.png" alt="Experience Icon" />
-                            <div className='flex flex-col items-center gap-2'>
-                                <Counter end={17} />
-                                <p className='font-medium'>Years Experience</p>
+                    <p className='text-gray-400 text-md xl:text-lg leading-relaxed'>
+                        Whether it’s local deliveries or international cargo, we ensure your goods reach their destination securely and on time. With advanced tracking systems and a dedicated team, we bring reliability right to your doorstep.
+                    </p>
+
+                    {/* Stats Counter Area */}
+                    <div className='grid grid-cols-2 gap-8 py-6 border-y border-gray-100'>
+                        <div className='flex items-center gap-4'>
+                            <div className='bg-red-50 p-3 rounded-lg'>
+                                <img className='w-10 h-10 object-contain' src="/experience-icons.png" alt="Experience" />
+                            </div>
+                            <div>
+                                <div className='flex items-center text-3xl font-bold text-slate-900'>
+                                    <Counter end={17} /> <span>+</span>
+                                </div>
+                                <p className='text-sm text-gray-500 font-medium uppercase'>Years Experience</p>
                             </div>
                         </div>
 
                         <div className='flex items-center gap-4'>
-                            <img className='w-8 xl:w-10' src="/done-icons.png" alt="Project Done Icon" />
-                            <div className='flex flex-col items-center gap-2'>
-                                <Counter end={100} />
-                                <p className='font-medium'>Project Done</p>
+                            <div className='bg-red-50 p-3 rounded-lg'>
+                                <img className='w-10 h-10 object-contain' src="/done-icons.png" alt="Projects" />
+                            </div>
+                            <div>
+                                <div className='flex items-center text-3xl font-bold text-slate-900'>
+                                    <Counter end={100} /> <span>%</span>
+                                </div>
+                                <p className='text-sm text-gray-500 font-medium uppercase'>Reliability Rate</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className='relative w-full xl:w-[580px] h-[700px] flex justify-center items-center'>
-                    <img className='w-[60%] absolute top-1 left-1' src="/image.png" alt="Main Image" />
-
-                    <div className='bg-white w-[350px] h-[450px] absolute bottom-1 right-1 flex justify-center items-center'>
-                        <div className='bg-red-600 w-[300px] h-[400px] flex flex-col justify-between items-start p-6'>
-                            <h3 className='text-white font-medium text-2xl'>Our Core Value</h3>
-
-                            <h3 className='text-white font-medium'>• Following the quality of our service thus having gained trust of our many clients.</h3>
-
-                            <h3 className='text-white font-medium'>• We provide with cargo safety throughout all the stages of our delivery process.</h3>
-
-                            <h3 className='text-white font-medium'>• International supply chains involves a myriad of unknown risks and challenging.</h3>
-                        </div>
+                {/* Right Side: Visual Image Stack */}
+                <div className='relative w-full xl:w-1/2 h-[500px] md:h-[650px]'>
+                    {/* Main Image Background */}
+                    <div className='absolute top-0 left-0 w-[85%] h-[80%] rounded-2xl overflow-hidden shadow-2xl'>
+                        <img className='w-full h-full object-cover transition-transform duration-700 hover:scale-110' src="/image.png" alt="Logistics Service" />
                     </div>
+
+                    {/* Overlay Value Card */}
+                    <div className='absolute bottom-0 right-0 w-full sm:w-[380px] bg-red-600 rounded-2xl p-8 shadow-2xl shadow-red-600/30 transform transition-all hover:-translate-y-2'>
+                        <h3 className='text-white font-bold text-2xl mb-6 border-b border-white/20 pb-4'>Our Core Values</h3>
+                        
+                        <ul className='space-y-4'>
+                            {[
+                                "Quality service with client trust",
+                                "Cargo safety at all delivery stages",
+                                "Risk-managed international chains"
+                            ].map((text, index) => (
+                                <li key={index} className='flex items-start gap-3 text-white/90 group'>
+                                    <span className='mt-1 text-white group-hover:scale-125 transition-transform'>✔</span>
+                                    <span className='font-medium text-sm leading-snug'>{text}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Decorative Elements */}
+                    <div className='absolute -z-10 -top-4 -left-4 w-24 h-24 bg-red-100 rounded-full blur-3xl'></div>
                 </div>
-            </section>
-        </>
+
+            </div>
+        </section>
     )
 }
 

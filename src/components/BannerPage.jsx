@@ -2,24 +2,45 @@ import React from 'react'
 
 const BannerPage = () => {
     return (
-        <>
-            <section className='bg-[url("/banner-img.avif")] w-full h-[70vh] bg-center bg-cover'>
-                <header className='bg-black w-full h-full bg-opacity-45 flex justify-center items-center'>
-                    <div className='w-[95%] xl:w-[62%] h-full flex flex-col justify-center gap-8 xl:gap-14 items-start'>
-                        <h4 className='text-white font-medium text-xl'>Since 2007</h4>
+        <section className='relative w-full h-screen min-h-[600px] bg-[url("/banner-img.avif")] bg-center bg-cover bg-no-repeat'>
+            {/* Dark Overlay - matn yaxshi ko'rinishi uchun */}
+            <div className='absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent'>
+                <div className='container mx-auto px-6 h-full flex flex-col justify-center'>
+                    
+                    <div className='max-w-4xl space-y-6'>
+                        {/* Since 2007 Badge */}
+                        <div className='inline-block px-4 py-1 rounded-full bg-red-600/20 border border-red-500/50 backdrop-blur-sm'>
+                            <span className='text-red-400 font-semibold tracking-wider text-sm uppercase'>
+                                Since 2007
+                            </span>
+                        </div>
 
-                        <h2 className='text-white font-bold text-4xl xl:text-7xl w-full xl:w-[60%]'>Best Transportation & Logistic Service</h2>
+                        {/* Title */}
+                        <h1 className='text-white font-extrabold text-5xl md:text-6xl lg:text-8xl leading-tight'>
+                            Reliable <span className='text-red-500'>Logistics</span> <br />
+                            & Transport
+                        </h1>
 
-                        <h4 className='text-white font-medium  text-lg xl:text-xl w-full xl:w-[50%]'>A trusted logistics partner offering end-to-end solutions in customs clearance and global transportation.</h4>
+                        {/* Description */}
+                        <p className='text-gray-200 font-medium text-lg md:text-xl max-w-xl leading-relaxed'>
+                            A trusted logistics partner offering end-to-end solutions in 
+                            customs clearance and global transportation.
+                        </p>
 
-                        <div className='flex items-center gap-5'>
-                            <button className='font-medium text-white px-6 py-3 bg-red-500 rounded-md'>Get Started</button>
-                            <button className='font-medium text-red-500 px-6 py-3 bg-white rounded-md'>Our Service</button>
+                        {/* Buttons */}
+                        <div className='flex flex-wrap items-center gap-4 pt-4'>
+                            <button className='px-8 py-4 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition-all active:scale-95 shadow-lg shadow-red-600/30'>
+                                Get Started
+                            </button>
+                            
+                            <button className='px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all duration-300'>
+                                Our Services
+                            </button>
                         </div>
                     </div>
-                </header>
-            </section>
-        </>
+                </div>
+            </div>
+        </section>
     )
 }
 

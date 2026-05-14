@@ -1,43 +1,73 @@
 import React from 'react'
 
 const OurService = () => {
+    const services = [
+        {
+            title: "Land Transport",
+            icon: "/truck.png",
+            desc: "Seamless ground transportation tailored to your cargo needs. Whether it’s local distribution or cross-border haulage, our land logistics services guarantee safe, on-schedule delivery.",
+            link: "#"
+        },
+        {
+            title: "Cargo Storage",
+            icon: "/package.png",
+            desc: "State-of-the-art storage solutions built for safety, scalability, and efficiency. Our facilities offer controlled environments, real-time inventory tracking, and adaptable space.",
+            link: "#"
+        }
+    ];
+
     return (
-        <>
-            <section className='w-full py-6 px-0 flex flex-col gap-6 items-start'>
-                <h4 className='text-red-500 font-medium text-xl md:text-2xl'>Our Service</h4>
-                <h2 className='font-bold text-2xl md:text-4xl xl:text-6xl w-full md:w-[90%] xl:w-[70%]'>
-                    We Provide Best Logistic Services
-                </h2>
-
-                <div className='w-full flex flex-col xl:flex-row justify-between items-center gap-8'>
-
-                    <div className='w-full md:w-[90%] xl:w-[550px] h-auto py-4'>
-                        <div className='bg-white rounded-xl w-full shadow-md p-4 flex items-center gap-4'>
-                            <div className='bg-red-600 rounded-lg min-w-[70px] min-h-[70px] flex justify-center items-center'>
-                                <img className='w-10 md:w-12' src="/truck.png" alt="Land Transport" />
-                            </div>
-                            <h3 className='font-medium text-xl md:text-2xl'>Land Transport</h3>
-                        </div>
-                        <p className='text-gray-500 mt-3 text-sm md:text-base'>
-                            Seamless ground transportation tailored to your cargo needs. Whether it’s local distribution or cross-border haulage, our land logistics services guarantee safe, on-schedule delivery with full visibility and operational excellence.
-                        </p>
-                    </div>
-
-                    <div className='w-full md:w-[90%] xl:w-[550px] h-auto py-4'>
-                        <div className='bg-white rounded-xl w-full shadow-md p-4 flex items-center gap-4'>
-                            <div className='bg-red-600 rounded-lg min-w-[70px] min-h-[70px] flex justify-center items-center'>
-                                <img className='w-8 md:w-10' src="/package.png" alt="Cargo Storage" />
-                            </div>
-                            <h3 className='font-medium text-xl md:text-2xl'>Cargo Storage</h3>
-                        </div>
-                        <p className='text-gray-500 mt-3 text-sm md:text-base'>
-                            State-of-the-art storage solutions built for safety, scalability, and efficiency. Our facilities offer controlled environments, real-time inventory tracking, and adaptable space to meet the demands of your supply chain.
-                        </p>
-                    </div>
-
+        <section className='container mx-auto py-20 px-4'>
+            {/* Section Header */}
+            <div className='flex flex-col items-start gap-4 mb-16'>
+                <div className='flex items-center gap-3'>
+                    <span className='w-10 h-1 bg-red-600 rounded-full'></span>
+                    <h4 className='text-red-600 font-bold uppercase tracking-widest text-sm'>
+                        Our Services
+                    </h4>
                 </div>
-            </section>
-        </>
+                <h2 className='font-extrabold text-3xl md:text-5xl lg:text-6xl text-slate-900 max-w-2xl leading-tight'>
+                    We Provide Best <span className='text-red-600'>Logistic</span> Services
+                </h2>
+            </div>
+
+            {/* Services Grid */}
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
+                {services.map((item, index) => (
+                    <div 
+                        key={index} 
+                        className='group bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100 transition-all duration-500 hover:shadow-2xl hover:shadow-red-600/10 hover:-translate-y-2'
+                    >
+                        <div className='flex flex-col md:flex-row items-start md:items-center gap-6 mb-6'>
+                            {/* Icon Box */}
+                            <div className='relative'>
+                                <div className='bg-red-600 w-20 h-20 rounded-2xl flex justify-center items-center shadow-lg shadow-red-600/40 transform group-hover:rotate-6 transition-transform duration-300'>
+                                    <img className='w-10 h-10 object-contain brightness-0 invert' src={item.icon} alt={item.title} />
+                                </div>
+                                {/* Decorative dot */}
+                                <div className='absolute -bottom-2 -right-2 w-6 h-6 bg-slate-100 rounded-full border-4 border-white'></div>
+                            </div>
+
+                            <h3 className='font-bold text-2xl md:text-3xl text-slate-800'>
+                                {item.title}
+                            </h3>
+                        </div>
+
+                        <p className='text-gray-500 text-lg leading-relaxed mb-8'>
+                            {item.desc}
+                        </p>
+
+                        <a 
+                            href={item.link} 
+                            className='inline-flex items-center gap-2 font-bold text-red-600 group/link'
+                        >
+                            Explore More 
+                            <span className='group-hover/link:translate-x-2 transition-transform duration-300'>→</span>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </section>
     )
 }
 

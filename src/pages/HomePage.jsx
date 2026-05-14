@@ -11,25 +11,39 @@ import FooterPage from '../components/FooterPage'
 
 const HomePage = () => {
     return (
-        <>
+        <main className="bg-white selection:bg-red-500 selection:text-white">
+            {/* Navigatsiya qismi */}
             <NavbarPage />
+
+            {/* Asosiy kirish qismi */}
             <BannerPage />
-            <section className=' w-full h-auto flex justify-center'>
-                <header className=' w-[95%] xl:w-[62%] h-auto py-5 px-2 xl:px-0'>
+
+            {/* Ma'lumot va Biz haqimizda (Konteyner ichida) */}
+            <section className="relative">
+                <div className="container mx-auto">
+                    {/* InformationPage banner ustiga chiqib turishi uchun uning ichida -mt-12 ishlatganmiz */}
                     <InformationPage />
                     <AboutSection />
-                </header>
+                </div>
             </section>
+
+            {/* To'liq kenglikdagi reklama bloki */}
             <LogisticsSolutions />
-            <section className=' w-full h-auto flex justify-center'>
-                <header className=' w-[95%] xl:w-[62%] h-auto py-5 px-2 xl:px-0'>
-                    <OurService/>
-                    <ExpressAbout/>
-                    <LogisticNews/>
-                </header>
+
+            {/* Xizmatlar va Yangiliklar qismi */}
+            <section className="bg-slate-50/30 py-10 lg:py-20">
+                <div className="container mx-auto px-4 lg:px-0">
+                    <div className="space-y-24"> {/* Bo'limlar orasidagi masofani bir xil saqlash uchun */}
+                        <OurService />
+                        <ExpressAbout />
+                        <LogisticNews />
+                    </div>
+                </div>
             </section>
-            <FooterPage/>
-        </>
+
+            {/* Sayt yakuni */}
+            <FooterPage />
+        </main>
     )
 }
 
