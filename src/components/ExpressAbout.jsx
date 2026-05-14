@@ -2,7 +2,7 @@ import React from 'react'
 
 const ExpressAbout = () => {
     return (
-        <section className='container mx-auto w-full py-16 lg:py-24 px-4'>
+        <section className='container mx-auto w-full py-16 lg:py-24 px-4 font-sans'>
             <div className='flex flex-col xl:flex-row items-center gap-12 xl:gap-20'>
                 
                 {/* Text Content Area */}
@@ -31,9 +31,9 @@ const ExpressAbout = () => {
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 pt-4'>
                             {['Global Tracking', 'Fastest Routes', '24/7 Support', 'Secure Packaging'].map((item, idx) => (
                                 <div key={idx} className='flex items-center gap-2'>
-                                    <div className='w-5 h-5 rounded-full bg-red-600 flex items-center justify-center'>
+                                    <div className='w-5 h-5 rounded-full bg-red-600 flex items-center justify-center flex-shrink-0'>
                                         <svg className='w-3 h-3 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' d='5 13l4 4L19 7' />
+                                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='3' d='M5 13l4 4L19 7' />
                                         </svg>
                                     </div>
                                     <span className='font-semibold text-slate-700 text-sm md:text-base'>{item}</span>
@@ -43,9 +43,8 @@ const ExpressAbout = () => {
                     </div>
                 </div>
 
-                {/* Image Area with Decorative Elements */}
+                {/* Image Area */}
                 <div className='w-full xl:w-1/2 order-1 xl:order-2 flex justify-center items-center relative'>
-                    {/* Decorative Background Shape */}
                     <div className='absolute w-[80%] h-[80%] bg-slate-100 rounded-full -z-10 blur-3xl opacity-60 animate-pulse'></div>
                     
                     <div className='relative group shadow-2xl rounded-3xl overflow-hidden'>
@@ -55,7 +54,6 @@ const ExpressAbout = () => {
                             alt="Express Delivery" 
                         />
                         
-                        {/* Floating Badge on Image */}
                         <div className='absolute bottom-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-xl shadow-xl hidden md:block'>
                             <div className='flex items-center gap-3'>
                                 <div className='bg-green-500 w-3 h-3 rounded-full animate-ping'></div>

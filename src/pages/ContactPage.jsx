@@ -24,7 +24,7 @@ const ContactPage = () => {
                         <ContactAddress />
 
                         {/* Xarita va Aloqa Formasi bo'limi */}
-                        <div className="bg-slate-50 rounded-3xl p-6 md:p-12 border border-slate-100 shadow-sm">
+                        <div className="bg-slate-50 rounded-3xl p-2 md:p-2 border border-slate-100 shadow-sm">
                             <ContactFormPage />
                         </div>
 
